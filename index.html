@@ -4,14 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+  <script type="text/javascript" src="js/gentleMeet.js"> </script>
   <title>Manejo de Calendario</title>
 </head>
 <body>
+  <div id="curtain"></div>
   <div id="main">
-    <div id="eventList"></div>
+    <div id="eventsContainer">
+      <div>
+        <h1>Proximos Eventos</h1>
+      </div>
+      <ul id="eventList">
+        <li class="event"><span>Evento 1</span><span>2:45 pm</span></li>
+        <li class="event"><span>Evento 2</span><span>3:45 pm</span></li>
+        <li class="event"><span>Evento 3</span><span>4:45 pm</span></li>
+        <li class="event"><span>Evento 4</span><span>5:45 pm</span></li>
+      </ul>
+    </div>
     <div id="cuerrentEvent">
-      <h1 id="eventTitle"></h1>
-      <h2 id="eventDate"></h2>
+      <h1 id="eventTitle">Evento prueba</h1>
+      <h2 id="timeToFinish">
+        1h 30m
+      </h2>
+      <h3 id="eventStartDate">2017-01-06 9:44 pm</h2>
+      <h3 id="eventEndDate">2017-01-06 10:44 pm</h2>
       <ul id="assistants">
         <li class="assistants">asdf@asdf</li>
         <li class="assistants">asdf@asdf</li>
