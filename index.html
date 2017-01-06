@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="gentleMeet.css">
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
   <script type="text/javascript" src="js/moment.min.js"> </script>
   <script type="text/javascript" src="js/gentleMeet.js"> </script>
   <title>Manejo de Calendario</title>
 </head>
 <body>
-  <div id="curtain"></div>
-  <div id="main">
+  <div id="loading" class="loading"></div>
+  <div id="page" style="display: none;">
     <div id="eventsContainer">
       <div>
         <h1>Proximos Eventos</h1>
@@ -24,18 +25,24 @@
       </ul>
     </div>
     <div id="cuerrentEvent">
-      <h1 id="eventTitle">Evento prueba</h1>
-      <h2 id="timeToFinish">
-        1h 30m
-      </h2>
-      <h3 id="startDateDiv"><span>Fecha de inicio</span>&nbsp;<span id="starDate">2017-01-06 10:44 pm</span></h3>
-      <h3 id="endDateDiv"><span>Fecha de fin</span>&nbsp;<span id="endDate">2017-01-06 10:44 pm</span></h3>
-      <ul id="assistants">
-        <li class="assistants">asdf@asdf</li>
-        <li class="assistants">asdf@asdf</li>
-        <li class="assistants">asdf@asdf</li>
-        <li class="assistants">asdf@asdf</li>
-      </ul>
+      <div id="noEvent">
+        <h1>No hay evento actual</h1>
+      </div>
+      <div id="eventOk" style="display:none">
+        <h1 id="eventTitle">Evento prueba</h1>
+        <h2 id="timeToFinish">
+          1h 30m
+        </h2>
+        <h3 id="startDateDiv"><span>Fecha de inicio</span>&nbsp;<span id="starDate">2017-01-06 10:44 pm</span></h3>
+        <h3 id="endDateDiv"><span>Fecha de fin</span>&nbsp;<span id="endDate">2017-01-06 10:44 pm</span></h3>
+        <ul id="assistants">
+          <li class="assistants">asdf@asdf</li>
+          <li class="assistants">asdf@asdf</li>
+          <li class="assistants">asdf@asdf</li>
+          <li class="assistants">asdf@asdf</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </body>
