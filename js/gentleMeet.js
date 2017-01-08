@@ -16,7 +16,7 @@ var $scope = (function(){
     //Configurar los proximos 4 eventos basados en la fecha actual
     for(var i=1;i < 5; i++){
       var m = moment(currentDate);
-      var endDate = m.add(30, 'm').toDate();
+      var endDate = m.add(5, 'm').toDate();
       var event = {
         "start":currentDate,
         "end":endDate,
@@ -69,7 +69,7 @@ var $scope = (function(){
       $("#endDate").text(moment(event.end).format('MMM D YYYY, h:mm:ss a'));
       $("#assistants").empty();
       event.assistans.forEach(function(item, index){
-          $("#assistants").append('<li class="assistants"> <a class="mdi mdi-account"> '+item+'</li>');
+          $("#assistants").append('<li class="assistant"> <a class="mdi mdi-account"> '+item+'</li>');
       })
 
       var currentDate = new Date();

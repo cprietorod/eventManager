@@ -77,9 +77,17 @@ body {
 
 #eventTitle{
     text-align: center;
-    element.style {
+    color: #90bf79;
 }
 #eventOk > h1 {
     text-align: center;
     font-size: 50px;
+}
+
+.event {
+    color: #eac57b;
+}
+
+.assistant{
+  color: #c598c5;
 }
