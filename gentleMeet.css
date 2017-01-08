@@ -17,8 +17,29 @@
   position: absolute;
   top: 40px;
   height: 100vh;
+}
 
+ul {
+  list-style-type: none;
+}
 
+#timeToFinish {
+  text-align: center;
+}
+#startDateDiv {
+  text-align: center;
+}
+#endDateDiv {
+  text-align: center;
+
+}
+
+#assistantsTitle {
+  text-align: left;
+}
+
+#assistants {
+  text-align: left;
 }
 
 body {
@@ -29,7 +50,7 @@ body {
 
 #cuerrentEvent{
   padding-left: 35px;
-  width: 100vh;
+  width: 900px;
 }
 
 #topBar{

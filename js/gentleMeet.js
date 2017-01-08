@@ -59,21 +59,23 @@ var $scope = (function(){
   }
 
   $self.setCurrentEventInfo = function(event){
+    $("#topBar").text(moment(new Date()).format('h:mm a'));
+
     if(event != null){
       $("#noEvent").hide();
       $("#eventOk").show();
-      $("#eventTitle").text(event.title);
+      $("#eventTitle").html('<a class="mdi mdi-calendar"></a> &nbsp;' + event.title);
       $("#starDate").text(moment(event.start).format('MMM D YYYY, h:mm:ss a'));
       $("#endDate").text(moment(event.end).format('MMM D YYYY, h:mm:ss a'));
       $("#assistants").empty();
       event.assistans.forEach(function(item, index){
-          $("#assistants").append('<li class="assistants">'+item+'</li>');
+          $("#assistants").append('<li class="assistants"> <a class="mdi mdi-account"> '+item+'</li>');
       })
 
       var currentDate = new Date();
       var remainingSeconds = (event.end - currentDate)/1000;
       var remainingAux = moment().startOf('day').add('s', remainingSeconds);
-      $("#timeToFinish").text(remainingAux.format('[horas: ]H [minutos: ]mm [segundos: ]ss'));
+      $("#timeToFinish").text("Tiempo restante " + remainingAux.format('H[h - ]mm[m - ]ss[s]'));
     }else{
       $("#noEvent").show();
       $("#eventOk").hide();
@@ -82,7 +84,7 @@ var $scope = (function(){
   }
 
   $self.addEventToList = function(event){
-    $( "#eventList" ).append('<li class="event"><span>'+ event.title+'</span>&nbsp;<span>'+moment(event.start).format('MMM D YYYY, h:mm:ss a')+'</span></li>');
+    $( "#eventList" ).append('<li class="event"><a class="mdi mdi-calendar"></a> &nbsp;<span>'+ event.title+'</span>&nbsp;<span>'+moment(event.start).format('MMM D YYYY, h:mm:ss a')+'</span></li>');
   }
 
   $self.cleanEventList = function(){
