@@ -73,7 +73,7 @@ var $scope = (function(){
       var currentDate = new Date();
       var remainingSeconds = (event.end - currentDate)/1000;
       var remainingAux = moment().startOf('day').add('s', remainingSeconds);
-      $("#timeToFinish").text(remainingAux.format('[horas:]H [minutos:]mm [segundos:]ss'));
+      $("#timeToFinish").text(remainingAux.format('[horas: ]H [minutos: ]mm [segundos: ]ss'));
     }else{
       $("#noEvent").show();
       $("#eventOk").hide();
