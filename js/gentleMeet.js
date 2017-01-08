@@ -32,6 +32,7 @@ var $scope = (function(){
   $self.validateCurrent = function(){
     $("#page").show();
     $("#loading").hide();
+    $("#topBar").text(moment(new Date()).format('YYYY-MM-DD h:mm a'));
 
     var currentDate = new Date();
     var eventsToDelete = [];
@@ -59,7 +60,7 @@ var $scope = (function(){
   }
 
   $self.setCurrentEventInfo = function(event){
-    $("#topBar").text(moment(new Date()).format('h:mm a'));
+
 
     if(event != null){
       $("#noEvent").hide();
